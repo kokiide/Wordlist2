@@ -33,11 +33,14 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w2r-wy-Bpj">
-                                <rect key="frame" x="164" y="488" width="46" height="30"/>
+                                <rect key="frame" x="156" y="488" width="62" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button">
+                                <state key="normal" title="単語一覧">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="B33-Au-sBn" kind="presentation" id="xP1-AV-JPo"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="title_logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="F2j-Ty-GZB">
                                 <rect key="frame" x="67" y="98" width="240" height="128"/>
@@ -46,15 +49,18 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <connections>
+                        <segue destination="pfZ-2l-ZOn" kind="presentation" identifier="toQuestionView" id="Tdd-zH-YuH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
         </scene>
-        <!--View Controller-->
+        <!--Question View Controller-->
         <scene sceneID="cl7-ei-UzF">
             <objects>
-                <viewController id="pfZ-2l-ZOn" sceneMemberID="viewController">
+                <viewController id="pfZ-2l-ZOn" customClass="QuestionViewController" customModule="Word_List_2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5ZV-RL-vKy"/>
                         <viewControllerLayoutGuide type="bottom" id="Cjp-4s-2c8"/>
@@ -106,15 +112,18 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <segue destination="JXp-ml-Yvr" kind="presentation" identifier="toFinishView" id="4UV-nZ-KZb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sea-2z-LfI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="912.79999999999995" y="136.28185907046478"/>
         </scene>
-        <!--View Controller-->
+        <!--Finish View Controller-->
         <scene sceneID="e3O-pe-IW2">
             <objects>
-                <viewController id="JXp-ml-Yvr" sceneMemberID="viewController">
+                <viewController id="JXp-ml-Yvr" customClass="FinishViewController" customModule="Word_List_2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="nJY-5V-lBZ"/>
                         <viewControllerLayoutGuide type="bottom" id="3NC-bx-wTX"/>
@@ -149,7 +158,7 @@
         <!--一覧-->
         <scene sceneID="7lX-WJ-ATK">
             <objects>
-                <tableViewController id="IYa-UK-XZN" sceneMemberID="viewController">
+                <tableViewController id="IYa-UK-XZN" customClass="ListTableViewController" customModule="Word_List_2" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="fzX-BH-VKR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -173,32 +182,65 @@
                         <barButtonItem key="leftBarButtonItem" title="もどる" id="2va-W0-2Zr"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="E9s-Nc-Czp">
                             <connections>
-                                <segue destination="hKb-Ah-wQb" kind="show" id="61N-kk-fa2"/>
+                                <segue destination="h5B-29-aMX" kind="show" id="rUE-5e-A6K"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gXE-Ul-9ba" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1560.8" y="-545.57721139430294"/>
+            <point key="canvasLocation" x="913" y="-546"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="usG-DO-j4C">
+        <!--新規追加-->
+        <scene sceneID="6db-G2-b4x">
             <objects>
-                <viewController id="hKb-Ah-wQb" sceneMemberID="viewController">
+                <viewController id="h5B-29-aMX" customClass="AddViewController" customModule="Word_List_2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="0GY-Rq-MOC"/>
-                        <viewControllerLayoutGuide type="bottom" id="Nt3-XY-4ur"/>
+                        <viewControllerLayoutGuide type="top" id="KFo-XH-L4d"/>
+                        <viewControllerLayoutGuide type="bottom" id="SPR-Cl-G2a"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="3c5-F8-tOQ">
+                    <view key="view" contentMode="scaleToFill" id="Ihd-lQ-Tk0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="英語" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lFK-Dv-sLe">
+                                <rect key="frame" x="74" y="242" width="35" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="日本語" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kqg-1k-zoI">
+                                <rect key="frame" x="74" y="346" width="52" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Co-dZ-2l2">
+                                <rect key="frame" x="194" y="237" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L4P-xo-Mqa">
+                                <rect key="frame" x="194" y="341" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="新規追加" id="j2r-y3-gM6">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="eqQ-fA-nxL"/>
+                    </navigationItem>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fw3-j2-pr8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G68-z3-dYH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2538" y="-546"/>
+            <point key="canvasLocation" x="1721" y="-546"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="eBE-h4-Ouw">
@@ -216,7 +258,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xRW-nR-Y9z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-535.20000000000005" y="-104.7976011994003"/>
+            <point key="canvasLocation" x="137" y="-546"/>
         </scene>
     </scenes>
     <resources>

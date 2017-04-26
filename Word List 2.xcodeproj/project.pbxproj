@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B535BDE1EB079B9006CDFF2 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B535BDD1EB079B9006CDFF2 /* QuestionViewController.swift */; };
+		8B535BE01EB079CB006CDFF2 /* FinishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B535BDF1EB079CB006CDFF2 /* FinishViewController.swift */; };
+		8B535BE41EB07A0C006CDFF2 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B535BE31EB07A0C006CDFF2 /* AddViewController.swift */; };
+		8B535BE61EB07AE6006CDFF2 /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B535BE51EB07AE6006CDFF2 /* ListTableViewController.swift */; };
 		8B8C9B991EAF69C500D03B21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8C9B981EAF69C500D03B21 /* AppDelegate.swift */; };
 		8B8C9B9B1EAF69C500D03B21 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8C9B9A1EAF69C500D03B21 /* ViewController.swift */; };
 		8B8C9B9E1EAF69C500D03B21 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B8C9B9C1EAF69C500D03B21 /* Main.storyboard */; };
@@ -41,6 +45,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8B535BDD1EB079B9006CDFF2 /* QuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
+		8B535BDF1EB079CB006CDFF2 /* FinishViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinishViewController.swift; sourceTree = "<group>"; };
+		8B535BE31EB07A0C006CDFF2 /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		8B535BE51EB07AE6006CDFF2 /* ListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
 		8B8C9B951EAF69C500D03B21 /* Word List 2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Word List 2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B8C9B981EAF69C500D03B21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8B8C9B9A1EAF69C500D03B21 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -113,6 +121,10 @@
 			children = (
 				8B8C9B981EAF69C500D03B21 /* AppDelegate.swift */,
 				8B8C9B9A1EAF69C500D03B21 /* ViewController.swift */,
+				8B535BDD1EB079B9006CDFF2 /* QuestionViewController.swift */,
+				8B535BDF1EB079CB006CDFF2 /* FinishViewController.swift */,
+				8B535BE31EB07A0C006CDFF2 /* AddViewController.swift */,
+				8B535BE51EB07AE6006CDFF2 /* ListTableViewController.swift */,
 				8B8C9B9C1EAF69C500D03B21 /* Main.storyboard */,
 				8B8C9B9F1EAF69C500D03B21 /* Assets.xcassets */,
 				8B8C9BA11EAF69C500D03B21 /* LaunchScreen.storyboard */,
@@ -307,7 +319,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B8C9B9B1EAF69C500D03B21 /* ViewController.swift in Sources */,
+				8B535BE01EB079CB006CDFF2 /* FinishViewController.swift in Sources */,
+				8B535BE41EB07A0C006CDFF2 /* AddViewController.swift in Sources */,
+				8B535BE61EB07AE6006CDFF2 /* ListTableViewController.swift in Sources */,
 				8B8C9B991EAF69C500D03B21 /* AppDelegate.swift in Sources */,
+				8B535BDE1EB079B9006CDFF2 /* QuestionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -558,6 +574,7 @@
 				8B8C9BBF1EAF69C500D03B21 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8B8C9BC01EAF69C500D03B21 /* Build configuration list for PBXNativeTarget "Word List 2Tests" */ = {
 			isa = XCConfigurationList;
@@ -566,6 +583,7 @@
 				8B8C9BC21EAF69C500D03B21 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8B8C9BC31EAF69C500D03B21 /* Build configuration list for PBXNativeTarget "Word List 2UITests" */ = {
 			isa = XCConfigurationList;
@@ -574,6 +592,7 @@
 				8B8C9BC51EAF69C500D03B21 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
