@@ -10,8 +10,18 @@ import UIKit
 
 class AddViewController: UIViewController {
 
+    @IBOutlet var englishTextField: UITextField!
+    @IBOutlet var japaneseTextField: UITextField!
+    
+    var wordArray: [Dictionary<String, String>] = []
+    
+    let saveData = UserDefaults.standard
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        if saveData.array(forKey: "WORD") != nil {
+            wordArray = saveData.array(forKey: "WORD") as! [Dictionary<String, String>]
+        }
 
         // Do any additional setup after loading the view.
     }
