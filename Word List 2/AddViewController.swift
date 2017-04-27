@@ -22,6 +22,26 @@ class AddViewController: UIViewController {
         if saveData.array(forKey: "WORD") != nil {
             wordArray = saveData.array(forKey: "WORD") as! [Dictionary<String, String>]
         }
+        
+        @IBAction func saveWord(){
+            let wordDictionary = ["english": englishTextField.text!, "japanese": japaneseTextField.text!]
+            
+            wordArray.append(wordDictionary)
+            saveData.set(wordArray, forKey: "WORD")
+            
+            let alert = UIAlertController(
+                title: "保存完了",
+                message: "単語の登録が完了しました",
+                preferredStyle: .alert
+            )
+            alert.addAction(UIAlertAction( title: "OK",
+                                           style: .default,
+                                           handler: nil
+            ))
+            self.present(alert, animated: true, completion: nil)
+            englishTextField.text = ""
+            japaneseTextField.text = ""
+        }
 
         // Do any additional setup after loading the view.
     }
