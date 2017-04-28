@@ -25,6 +25,8 @@
 		8B8C9BD31EAF6AE400D03B21 /* fin.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B8C9BCC1EAF6AE400D03B21 /* fin.png */; };
 		8B8C9BD41EAF6AE400D03B21 /* title_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B8C9BCD1EAF6AE400D03B21 /* title_logo.png */; };
 		8B8C9BD51EAF6AE400D03B21 /* word_blank.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B8C9BCE1EAF6AE400D03B21 /* word_blank.png */; };
+		8BF316461EB327FA0031C0DD /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF316441EB327FA0031C0DD /* ListTableViewCell.swift */; };
+		8BF316471EB327FA0031C0DD /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BF316451EB327FA0031C0DD /* ListTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +71,8 @@
 		8B8C9BCC1EAF6AE400D03B21 /* fin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fin.png; sourceTree = "<group>"; };
 		8B8C9BCD1EAF6AE400D03B21 /* title_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = title_logo.png; sourceTree = "<group>"; };
 		8B8C9BCE1EAF6AE400D03B21 /* word_blank.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = word_blank.png; sourceTree = "<group>"; };
+		8BF316441EB327FA0031C0DD /* ListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
+		8BF316451EB327FA0031C0DD /* ListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +134,8 @@
 				8B8C9BA11EAF69C500D03B21 /* LaunchScreen.storyboard */,
 				8B8C9BA41EAF69C500D03B21 /* Info.plist */,
 				8B8C9BC61EAF6AE400D03B21 /* WordList素材 */,
+				8BF316441EB327FA0031C0DD /* ListTableViewCell.swift */,
+				8BF316451EB327FA0031C0DD /* ListTableViewCell.xib */,
 			);
 			path = "Word List 2";
 			sourceTree = "<group>";
@@ -292,6 +298,7 @@
 				8B8C9BD01EAF6AE400D03B21 /* Default-568h@2x.png in Resources */,
 				8B8C9BD51EAF6AE400D03B21 /* word_blank.png in Resources */,
 				8B8C9B9E1EAF69C500D03B21 /* Main.storyboard in Resources */,
+				8BF316471EB327FA0031C0DD /* ListTableViewCell.xib in Resources */,
 				8B8C9BD21EAF6AE400D03B21 /* Default-736h@3x.png in Resources */,
 				8B8C9BD31EAF6AE400D03B21 /* fin.png in Resources */,
 			);
@@ -318,6 +325,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BF316461EB327FA0031C0DD /* ListTableViewCell.swift in Sources */,
 				8B8C9B9B1EAF69C500D03B21 /* ViewController.swift in Sources */,
 				8B535BE01EB079CB006CDFF2 /* FinishViewController.swift in Sources */,
 				8B535BE41EB07A0C006CDFF2 /* AddViewController.swift in Sources */,

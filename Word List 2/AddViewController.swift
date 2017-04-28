@@ -22,7 +22,8 @@ class AddViewController: UIViewController {
         if saveData.array(forKey: "WORD") != nil {
             wordArray = saveData.array(forKey: "WORD") as! [Dictionary<String, String>]
         }
-        
+    }
+    
         @IBAction func saveWord(){
             let wordDictionary = ["english": englishTextField.text!, "japanese": japaneseTextField.text!]
             
@@ -44,7 +45,6 @@ class AddViewController: UIViewController {
         }
 
         // Do any additional setup after loading the view.
-    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
